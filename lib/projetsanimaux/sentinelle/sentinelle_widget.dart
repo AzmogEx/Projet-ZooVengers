@@ -159,8 +159,8 @@ class _SentinelleWidgetState extends State<SentinelleWidget> {
                     size: 50.0,
                   ),
                   const FlutterFlowVideoPlayer(
-                    path: 'https://fichier.adam-marzuk.fr/video/Hiboux.mp4',
-                    videoType: VideoType.network,
+                    path: 'assets/videos/Hiboux.mp4',
+                    videoType: VideoType.asset,
                     autoPlay: true,
                     looping: true,
                     showControls: false,

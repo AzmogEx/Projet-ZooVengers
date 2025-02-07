@@ -161,9 +161,8 @@ class _TasmanieWidgetState extends State<TasmanieWidget> {
                     size: 50.0,
                   ),
                   const FlutterFlowVideoPlayer(
-                    path:
-                        'https://fichier.adam-marzuk.fr/video/Ornythorinque.mp4',
-                    videoType: VideoType.network,
+                    path: 'assets/videos/Ornithorynque.mp4',
+                    videoType: VideoType.asset,
                     autoPlay: true,
                     looping: true,
                     showControls: false,

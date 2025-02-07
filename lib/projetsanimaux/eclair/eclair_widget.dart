@@ -146,7 +146,7 @@ class _EclairWidgetState extends State<EclairWidget> {
                 children: [
                   Text(
                     FFLocalizations.of(context).getText(
-                      'gczlzam2' /* Colibri thalassinus, Colibri c... */,
+                      'gczlzam2' /* Colibri d'Anais , Colibri coru... */,
                     ),
                     style: FlutterFlowTheme.of(context).titleLarge.override(
                           fontFamily: 'Oswald',
@@ -159,8 +159,8 @@ class _EclairWidgetState extends State<EclairWidget> {
                     size: 50.0,
                   ),
                   const FlutterFlowVideoPlayer(
-                    path: 'https://fichier.adam-marzuk.fr/video/Colibri.mp4',
-                    videoType: VideoType.network,
+                    path: 'assets/videos/Marsupial.mp4',
+                    videoType: VideoType.asset,
                     autoPlay: true,
                     looping: true,
                     showControls: false,

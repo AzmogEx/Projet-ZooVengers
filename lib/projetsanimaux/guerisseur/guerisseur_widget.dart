@@ -159,8 +159,8 @@ class _GuerisseurWidgetState extends State<GuerisseurWidget> {
                     size: 50.0,
                   ),
                   const FlutterFlowVideoPlayer(
-                    path: 'https://fichier.adam-marzuk.fr/video/Axolotl.mp4',
-                    videoType: VideoType.network,
+                    path: 'assets/videos/Axolotl.mp4',
+                    videoType: VideoType.asset,
                     autoPlay: true,
                     looping: true,
                     showControls: false,

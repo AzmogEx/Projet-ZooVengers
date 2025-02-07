@@ -822,7 +822,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'DESTELLO',
     },
     'gczlzam2': {
-      'fr': 'Colibri thalassinus, Colibri coruscans',
+      'fr': 'Colibri d\'Anais , Colibri coruscans',
       'en': 'Hummingbird thalassinus, Thalassin hummingbird',
       'es': 'Colibrí thalassinus, Colibrí thalassinus',
     },
@@ -958,7 +958,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'Usa este vídeo para encontrar el animal en el museo y resolver el último rompecabezas.',
     },
     '0xwayj70': {
-      'fr': 'Le code est : nombre de doigts total de l\'animal.',
+      'fr': 'Le code est : nombre de membres locomoteur X nombre d’oreille.',
       'en': 'The code is: total number of fingers of the animal.',
       'es': 'El código es: número total de dedos del animal.',
     },

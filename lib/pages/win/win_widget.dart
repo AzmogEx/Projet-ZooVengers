@@ -127,18 +127,45 @@ class _WinWidgetState extends State<WinWidget> {
                         ),
                   ),
                 ),
-                const Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
-                  child: FlutterFlowVideoPlayer(
-                    path: 'assets/videos/final.mp4',
-                    videoType: VideoType.asset,
-                    autoPlay: true,
-                    looping: false,
-                    showControls: true,
-                    allowFullScreen: true,
-                    allowPlaybackSpeedMenu: false,
+                if (FFAppState().lang == 'fr')
+                  const Align(
+                    alignment: AlignmentDirectional(0.0, 0.0),
+                    child: FlutterFlowVideoPlayer(
+                      path: 'assets/videos/final-fr.mp4',
+                      videoType: VideoType.asset,
+                      autoPlay: true,
+                      looping: false,
+                      showControls: true,
+                      allowFullScreen: true,
+                      allowPlaybackSpeedMenu: false,
+                    ),
                   ),
-                ),
+                if (FFAppState().lang == 'en')
+                  const Align(
+                    alignment: AlignmentDirectional(0.0, 0.0),
+                    child: FlutterFlowVideoPlayer(
+                      path: 'assets/videos/final-en.mp4',
+                      videoType: VideoType.asset,
+                      autoPlay: true,
+                      looping: false,
+                      showControls: true,
+                      allowFullScreen: true,
+                      allowPlaybackSpeedMenu: false,
+                    ),
+                  ),
+                if (FFAppState().lang == 'es')
+                  const Align(
+                    alignment: AlignmentDirectional(0.0, 0.0),
+                    child: FlutterFlowVideoPlayer(
+                      path: 'assets/videos/final-es.mp4',
+                      videoType: VideoType.asset,
+                      autoPlay: true,
+                      looping: false,
+                      showControls: true,
+                      allowFullScreen: true,
+                      allowPlaybackSpeedMenu: false,
+                    ),
+                  ),
                 if (FFAppState().continuer == false)
                   Padding(
                     padding:

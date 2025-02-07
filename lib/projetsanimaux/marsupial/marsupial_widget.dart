@@ -159,8 +159,8 @@ class _MarsupialWidgetState extends State<MarsupialWidget> {
                     size: 50.0,
                   ),
                   const FlutterFlowVideoPlayer(
-                    path: 'https://fichier.adam-marzuk.fr/video/Marsupial.mp4',
-                    videoType: VideoType.network,
+                    path: 'assets/videos/Marsupial.mp4',
+                    videoType: VideoType.asset,
                     autoPlay: true,
                     looping: true,
                     showControls: false,
@@ -183,7 +183,7 @@ class _MarsupialWidgetState extends State<MarsupialWidget> {
                   ),
                   Text(
                     FFLocalizations.of(context).getText(
-                      '0xwayj70' /* Le code est : nombre de doigts... */,
+                      '0xwayj70' /* Le code est : nombre de membre... */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Oswald',
@@ -319,7 +319,7 @@ class _MarsupialWidgetState extends State<MarsupialWidget> {
                   FFButtonWidget(
                     onPressed: () async {
                       if (FFAppState().Difficulte == true) {
-                        if (_model.textController.text == '20') {
+                        if (_model.textController.text == '8') {
                           FFAppState().addToMdpfinale(
                               FFAppState().nbrmdp.elementAtOrNull(2)!);
                           safeSetState(() {});
@@ -401,7 +401,7 @@ class _MarsupialWidgetState extends State<MarsupialWidget> {
                           );
                         }
                       } else {
-                        if (_model.textController.text == '20') {
+                        if (_model.textController.text == '8') {
                           FFAppState().addToMdpfinale(
                               FFAppState().nbrmdp.elementAtOrNull(8)!);
                           safeSetState(() {});

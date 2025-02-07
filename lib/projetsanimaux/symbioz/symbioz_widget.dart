@@ -159,8 +159,8 @@ class _SymbiozWidgetState extends State<SymbiozWidget> {
                     size: 50.0,
                   ),
                   const FlutterFlowVideoPlayer(
-                    path: 'https://fichier.adam-marzuk.fr/video/Paresseu.mp4',
-                    videoType: VideoType.network,
+                    path: 'assets/videos/Paresseu.mp4',
+                    videoType: VideoType.asset,
                     autoPlay: true,
                     looping: true,
                     showControls: false,
