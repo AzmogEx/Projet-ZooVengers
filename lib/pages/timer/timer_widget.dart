@@ -42,7 +42,7 @@ class _TimerWidgetState extends State<TimerWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFF7A90A4),
+        backgroundColor: Color(0xFF7A90A4),
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
@@ -51,7 +51,7 @@ class _TimerWidgetState extends State<TimerWidget> {
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back_rounded,
               color: Colors.white,
               size: 30.0,
@@ -72,7 +72,7 @@ class _TimerWidgetState extends State<TimerWidget> {
                   fontWeight: FontWeight.w500,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: true,
           elevation: 2.0,
         ),
@@ -84,11 +84,11 @@ class _TimerWidgetState extends State<TimerWidget> {
             children: [
               Flexible(
                 child: Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Stack(
                     children: [
                       Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           height: MediaQuery.sizeOf(context).height * 1.0,
@@ -105,9 +105,9 @@ class _TimerWidgetState extends State<TimerWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(-1.02, -0.25),
+                        alignment: AlignmentDirectional(-1.02, -0.25),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               50.0, 0.0, 0.0, 0.0),
                           child: FFButtonWidget(
                             onPressed: () async {
@@ -126,9 +126,9 @@ class _TimerWidgetState extends State<TimerWidget> {
                             options: FFButtonOptions(
                               width: 100.0,
                               height: 50.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context).primary,
                               textStyle: FlutterFlowTheme.of(context)
@@ -145,9 +145,9 @@ class _TimerWidgetState extends State<TimerWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(1.03, -0.24),
+                        alignment: AlignmentDirectional(1.03, -0.24),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 50.0, 0.0),
                           child: FFButtonWidget(
                             onPressed: () async {
@@ -166,9 +166,9 @@ class _TimerWidgetState extends State<TimerWidget> {
                             options: FFButtonOptions(
                               width: 100.0,
                               height: 50.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context).primary,
                               textStyle: FlutterFlowTheme.of(context)
@@ -185,9 +185,9 @@ class _TimerWidgetState extends State<TimerWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(0.0, -0.86),
+                        alignment: AlignmentDirectional(0.0, -0.86),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
@@ -205,9 +205,9 @@ class _TimerWidgetState extends State<TimerWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(0.0, 1.0),
+                        alignment: AlignmentDirectional(0.0, 1.0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 150.0),
                           child: Text(
                             FFLocalizations.of(context).getText(

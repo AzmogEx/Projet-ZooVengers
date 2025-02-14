@@ -1231,7 +1231,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '5d89nccj': {
       'fr':
-          'Dans ce  jeu  vous devrez résoudre différentes énigmes pour retrouver tout les animaux perdu dans la salle de zoologie. du muséeum d\'histoire naturel de Nîmes.',
+          'Dans ce  jeu  vous devrez résoudre différentes énigmes pour retrouver tout les animaux perdu dans la salle de zoologie du muséum d\'histoire naturel de Nîmes.',
       'en':
           'In this game you will have to solve different puzzles to find all the animals lost in the zoology room of the natural history museum of Nîmes.',
       'es':
@@ -1243,7 +1243,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Propuesto por:',
     },
     '49upwuqe': {
-      'fr': 'Museum d\'histoire naturel Nîmes',
+      'fr': 'Muséum d\'histoire naturel Nîmes',
       'en': 'Natural History Museum Nîmes',
       'es': 'Museo de Historia Natural de Nimes',
     },

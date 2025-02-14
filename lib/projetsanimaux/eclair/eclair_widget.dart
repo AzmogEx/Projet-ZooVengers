@@ -62,7 +62,7 @@ class _EclairWidgetState extends State<EclairWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFF7A90A4),
+        backgroundColor: Color(0xFF7A90A4),
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
@@ -71,7 +71,7 @@ class _EclairWidgetState extends State<EclairWidget> {
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: const Icon(
+            icon: Icon(
               Icons.keyboard_backspace,
               color: Colors.white,
               size: 30.0,
@@ -93,9 +93,9 @@ class _EclairWidgetState extends State<EclairWidget> {
           ),
           actions: [
             Align(
-              alignment: const AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.0, 0.0),
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                 child: FlutterFlowTimer(
                   initialTime: FFAppState().countDown,
                   getDisplayTime: (value) => StopWatchTimer.getDisplayTime(
@@ -104,7 +104,7 @@ class _EclairWidgetState extends State<EclairWidget> {
                     milliSecond: false,
                   ),
                   controller: _model.timerController,
-                  updateStateInterval: const Duration(milliseconds: 1000),
+                  updateStateInterval: Duration(milliseconds: 1000),
                   onChanged: (value, displayTime, shouldUpdate) {
                     _model.timerMilliseconds = value;
                     _model.timerValue = displayTime;
@@ -153,13 +153,13 @@ class _EclairWidgetState extends State<EclairWidget> {
                           letterSpacing: 0.0,
                         ),
                   ),
-                  const Icon(
+                  Icon(
                     Icons.music_note,
                     color: Colors.black,
                     size: 50.0,
                   ),
-                  const FlutterFlowVideoPlayer(
-                    path: 'assets/videos/Marsupial.mp4',
+                  FlutterFlowVideoPlayer(
+                    path: 'assets/videos/Colibri.mp4',
                     videoType: VideoType.asset,
                     autoPlay: true,
                     looping: true,
@@ -168,7 +168,7 @@ class _EclairWidgetState extends State<EclairWidget> {
                     allowPlaybackSpeedMenu: false,
                   ),
                   Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         'e9ap7swu' /* Utilisez cette vidéo pour retr... */,
@@ -192,10 +192,10 @@ class _EclairWidgetState extends State<EclairWidget> {
                         ),
                   ),
                   Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                       child: TextFormField(
                         controller: _model.textController,
                         focusNode: _model.textFieldFocusNode,
@@ -223,7 +223,7 @@ class _EclairWidgetState extends State<EclairWidget> {
                             borderRadius: BorderRadius.circular(8.0),
                           ),
                           focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
+                            borderSide: BorderSide(
                               color: Color(0x00000000),
                               width: 2.0,
                             ),
@@ -450,9 +450,9 @@ class _EclairWidgetState extends State<EclairWidget> {
                     options: FFButtonOptions(
                       height: 40.0,
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
@@ -461,7 +461,7 @@ class _EclairWidgetState extends State<EclairWidget> {
                                 letterSpacing: 0.0,
                               ),
                       elevation: 3.0,
-                      borderSide: const BorderSide(
+                      borderSide: BorderSide(
                         color: Colors.transparent,
                         width: 1.0,
                       ),

@@ -52,7 +52,7 @@ class _RevisionnageWidgetState extends State<RevisionnageWidget> {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              SizedBox(
+              Container(
                 width: double.infinity,
                 height: 600.0,
                 child: Stack(
@@ -64,9 +64,9 @@ class _RevisionnageWidgetState extends State<RevisionnageWidget> {
                       fit: BoxFit.cover,
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(-1.0, -1.0),
+                      alignment: AlignmentDirectional(-1.0, -1.0),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 60.0, 0.0, 0.0),
                         child: FlutterFlowIconButton(
                           borderRadius: 30.0,
@@ -85,9 +85,9 @@ class _RevisionnageWidgetState extends State<RevisionnageWidget> {
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(0.0, 1.0),
+                      alignment: AlignmentDirectional(0.0, 1.0),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 16.0, 16.0, 16.0),
                         child: Material(
                           color: Colors.transparent,
@@ -107,7 +107,7 @@ class _RevisionnageWidgetState extends State<RevisionnageWidget> {
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   16.0, 12.0, 16.0, 12.0),
                               child: SingleChildScrollView(
                                 scrollDirection: Axis.horizontal,
@@ -121,7 +121,7 @@ class _RevisionnageWidgetState extends State<RevisionnageWidget> {
                                       size: 24.0,
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           10.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -146,9 +146,9 @@ class _RevisionnageWidgetState extends State<RevisionnageWidget> {
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(1.0, -1.0),
+                      alignment: AlignmentDirectional(1.0, -1.0),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             0.0, 70.0, 10.0, 0.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(0.0),
@@ -160,11 +160,11 @@ class _RevisionnageWidgetState extends State<RevisionnageWidget> {
                             child: Container(
                               width: 217.0,
                               decoration: BoxDecoration(
-                                color: const Color(0x4C88DDFF),
+                                color: Color(0x4C88DDFF),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 6.0, 10.0, 6.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -206,7 +206,7 @@ class _RevisionnageWidgetState extends State<RevisionnageWidget> {
                       ),
                     ),
                     if (FFAppState().lang == 'fr')
-                      const Align(
+                      Align(
                         alignment: AlignmentDirectional(0.0, 0.0),
                         child: FlutterFlowVideoPlayer(
                           path: 'assets/videos/Zoovengers.fr.mp4',
@@ -219,7 +219,7 @@ class _RevisionnageWidgetState extends State<RevisionnageWidget> {
                         ),
                       ),
                     if (FFAppState().lang == 'es')
-                      const Align(
+                      Align(
                         alignment: AlignmentDirectional(0.0, 0.0),
                         child: FlutterFlowVideoPlayer(
                           path: 'assets/videos/zoovengers-es.mp4',
@@ -232,7 +232,7 @@ class _RevisionnageWidgetState extends State<RevisionnageWidget> {
                         ),
                       ),
                     if (FFAppState().lang == 'en')
-                      const Align(
+                      Align(
                         alignment: AlignmentDirectional(0.0, 0.0),
                         child: FlutterFlowVideoPlayer(
                           path: 'assets/videos/zoovengers-en.mp4',
@@ -245,9 +245,9 @@ class _RevisionnageWidgetState extends State<RevisionnageWidget> {
                         ),
                       ),
                     Align(
-                      alignment: const AlignmentDirectional(0.0, 1.0),
+                      alignment: AlignmentDirectional(0.0, 1.0),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             0.0, 0.0, 0.0, 100.0),
                         child: FFButtonWidget(
                           onPressed: () async {
@@ -258,9 +258,9 @@ class _RevisionnageWidgetState extends State<RevisionnageWidget> {
                           ),
                           options: FFButtonOptions(
                             height: 40.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 24.0, 0.0, 24.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
                             textStyle: FlutterFlowTheme.of(context)
@@ -271,7 +271,7 @@ class _RevisionnageWidgetState extends State<RevisionnageWidget> {
                                   letterSpacing: 0.0,
                                 ),
                             elevation: 3.0,
-                            borderSide: const BorderSide(
+                            borderSide: BorderSide(
                               color: Colors.transparent,
                               width: 1.0,
                             ),
@@ -284,14 +284,14 @@ class _RevisionnageWidgetState extends State<RevisionnageWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           's61vinml' /* Zoovengers */,
@@ -319,7 +319,7 @@ class _RevisionnageWidgetState extends State<RevisionnageWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
                       child: Container(
                         height: 2.0,
                         decoration: BoxDecoration(
@@ -329,7 +329,7 @@ class _RevisionnageWidgetState extends State<RevisionnageWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 10.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [

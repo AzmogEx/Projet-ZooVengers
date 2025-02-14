@@ -47,7 +47,7 @@ class _StartWidgetState extends State<StartWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
           title: Align(
-            alignment: const AlignmentDirectional(0.0, 0.0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: Text(
               FFLocalizations.of(context).getText(
                 '711x0j05' /* Zoovengers Escape game */,
@@ -60,17 +60,17 @@ class _StartWidgetState extends State<StartWidget> {
                   ),
             ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 2.0,
         ),
         body: SafeArea(
           top: true,
           child: Stack(
-            alignment: const AlignmentDirectional(0.0, 0.0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             children: [
               Align(
-                alignment: const AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Container(
                   width: MediaQuery.sizeOf(context).width * 1.0,
                   height: MediaQuery.sizeOf(context).height * 1.0,
@@ -86,9 +86,9 @@ class _StartWidgetState extends State<StartWidget> {
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(-1.0, 0.0),
+                alignment: AlignmentDirectional(-1.0, 0.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
                   child: Container(
                     width: MediaQuery.sizeOf(context).width * 0.42,
                     height: MediaQuery.sizeOf(context).height * 0.08,
@@ -97,7 +97,7 @@ class _StartWidgetState extends State<StartWidget> {
                       borderRadius: BorderRadius.circular(12.0),
                     ),
                     child: Align(
-                      alignment: const AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.0, 0.0),
                       child: FFButtonWidget(
                         onPressed: () async {
                           FFAppState().Difficulte = false;
@@ -111,9 +111,9 @@ class _StartWidgetState extends State<StartWidget> {
                         options: FFButtonOptions(
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           height: MediaQuery.sizeOf(context).height * 1.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               15.0, 0.0, 15.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).primary,
                           textStyle:
@@ -124,7 +124,7 @@ class _StartWidgetState extends State<StartWidget> {
                                     letterSpacing: 0.0,
                                   ),
                           elevation: 3.0,
-                          borderSide: const BorderSide(
+                          borderSide: BorderSide(
                             color: Color(0xFF00FF10),
                             width: 3.0,
                           ),
@@ -136,9 +136,9 @@ class _StartWidgetState extends State<StartWidget> {
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(1.0, 0.0),
+                alignment: AlignmentDirectional(1.0, 0.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
                   child: Container(
                     width: MediaQuery.sizeOf(context).width * 0.42,
                     height: MediaQuery.sizeOf(context).height * 0.08,
@@ -147,7 +147,7 @@ class _StartWidgetState extends State<StartWidget> {
                       borderRadius: BorderRadius.circular(12.0),
                     ),
                     child: Align(
-                      alignment: const AlignmentDirectional(1.0, 0.0),
+                      alignment: AlignmentDirectional(1.0, 0.0),
                       child: FFButtonWidget(
                         onPressed: () async {
                           FFAppState().Difficulte = true;
@@ -195,9 +195,9 @@ class _StartWidgetState extends State<StartWidget> {
                         options: FFButtonOptions(
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           height: MediaQuery.sizeOf(context).height * 1.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               15.0, 0.0, 15.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).primary,
                           textStyle:
@@ -208,7 +208,7 @@ class _StartWidgetState extends State<StartWidget> {
                                     letterSpacing: 0.0,
                                   ),
                           elevation: 3.0,
-                          borderSide: const BorderSide(
+                          borderSide: BorderSide(
                             color: Color(0xFFCF00FF),
                             width: 3.0,
                           ),
@@ -220,7 +220,7 @@ class _StartWidgetState extends State<StartWidget> {
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(0.7, 0.15),
+                alignment: AlignmentDirectional(0.7, 0.15),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     'l3dg3sze' /* Casse tête */,
@@ -233,7 +233,7 @@ class _StartWidgetState extends State<StartWidget> {
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(-0.02, 0.58),
+                alignment: AlignmentDirectional(-0.02, 0.58),
                 child: AutoSizeText(
                   FFLocalizations.of(context).getText(
                     '8e6so0wr' /* Attention : le choix de la dif... */,
@@ -248,7 +248,7 @@ class _StartWidgetState extends State<StartWidget> {
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(-0.71, 0.14),
+                alignment: AlignmentDirectional(-0.71, 0.14),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     '22xd5sx7' /* Observation */,

@@ -42,7 +42,7 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
         }),
         Future(() async {
           if (FFAppState().countDown < 1800000) {
-            FFAppState().couleur = const Color(0xFFFF0000);
+            FFAppState().couleur = Color(0xFFFF0000);
             safeSetState(() {});
           }
         }),
@@ -86,7 +86,7 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
               ),
             ),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
+              padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -105,7 +105,7 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         'ao64zo8d' /* Bienvenue sur le decryptek! Ut... */,
@@ -128,7 +128,7 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                         milliSecond: false,
                       ),
                       controller: _model.timerController,
-                      updateStateInterval: const Duration(milliseconds: 1000),
+                      updateStateInterval: Duration(milliseconds: 1000),
                       onChanged: (value, displayTime, shouldUpdate) {
                         _model.timerMilliseconds = value;
                         _model.timerValue = displayTime;
@@ -143,16 +143,16 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                               ),
                     ),
                   Align(
-                    alignment: const AlignmentDirectional(0.0, 1.0),
+                    alignment: AlignmentDirectional(0.0, 1.0),
                     child: Container(
                       width: 100.0,
                       height: 100.0,
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: Color(0x007A90A4),
                       ),
                       child: AlignedTooltip(
                         content: Padding(
-                          padding: const EdgeInsets.all(4.0),
+                          padding: EdgeInsets.all(4.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
                               'x7kukhvf' /* Il est fortement recommandé de... */,
@@ -174,8 +174,8 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                         elevation: 4.0,
                         tailBaseWidth: 40.0,
                         tailLength: 12.0,
-                        waitDuration: const Duration(milliseconds: 300),
-                        showDuration: const Duration(milliseconds: 4000),
+                        waitDuration: Duration(milliseconds: 300),
+                        showDuration: Duration(milliseconds: 4000),
                         triggerMode: TooltipTriggerMode.tap,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(8.0),
@@ -192,7 +192,7 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                   if (FFAppState().Difficulte == false)
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 180.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 180.0, 0.0, 0.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           '7t7qxmio' /* Cette fonctionnalitée est rése... */,
@@ -209,13 +209,13 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                       (FFAppState().continuer == false) &&
                       (FFAppState().lang == 'fr'))
                     Expanded(
-                      child: SizedBox(
+                      child: Container(
                         width: double.infinity,
                         height: 500.0,
                         child: Stack(
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 40.0),
                               child: PageView(
                                 controller: _model.pageViewController1 ??=
@@ -444,9 +444,9 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(-1.0, 1.0),
+                              alignment: AlignmentDirectional(-1.0, 1.0),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 0.0, 16.0),
                                 child:
                                     smooth_page_indicator.SmoothPageIndicator(
@@ -458,13 +458,13 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                                     await _model.pageViewController1!
                                         .animateToPage(
                                       i,
-                                      duration: const Duration(milliseconds: 500),
+                                      duration: Duration(milliseconds: 500),
                                       curve: Curves.ease,
                                     );
                                     safeSetState(() {});
                                   },
                                   effect:
-                                      const smooth_page_indicator.ExpandingDotsEffect(
+                                      smooth_page_indicator.ExpandingDotsEffect(
                                     expansionFactor: 3.0,
                                     spacing: 8.0,
                                     radius: 16.0,
@@ -485,13 +485,13 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                       (FFAppState().continuer == true) &&
                       (FFAppState().lang == 'fr'))
                     Expanded(
-                      child: SizedBox(
+                      child: Container(
                         width: double.infinity,
                         height: 500.0,
                         child: Stack(
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 40.0),
                               child: PageView(
                                 controller: _model.pageViewController2 ??=
@@ -676,9 +676,9 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(-1.0, 1.0),
+                              alignment: AlignmentDirectional(-1.0, 1.0),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 0.0, 16.0),
                                 child:
                                     smooth_page_indicator.SmoothPageIndicator(
@@ -690,13 +690,13 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                                     await _model.pageViewController2!
                                         .animateToPage(
                                       i,
-                                      duration: const Duration(milliseconds: 500),
+                                      duration: Duration(milliseconds: 500),
                                       curve: Curves.ease,
                                     );
                                     safeSetState(() {});
                                   },
                                   effect:
-                                      const smooth_page_indicator.ExpandingDotsEffect(
+                                      smooth_page_indicator.ExpandingDotsEffect(
                                     expansionFactor: 3.0,
                                     spacing: 8.0,
                                     radius: 16.0,
@@ -717,13 +717,13 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                       (FFAppState().continuer == false) &&
                       (FFAppState().lang == 'en'))
                     Expanded(
-                      child: SizedBox(
+                      child: Container(
                         width: double.infinity,
                         height: 500.0,
                         child: Stack(
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 40.0),
                               child: PageView(
                                 controller: _model.pageViewController3 ??=
@@ -952,9 +952,9 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(-1.0, 1.0),
+                              alignment: AlignmentDirectional(-1.0, 1.0),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 0.0, 16.0),
                                 child:
                                     smooth_page_indicator.SmoothPageIndicator(
@@ -966,13 +966,13 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                                     await _model.pageViewController3!
                                         .animateToPage(
                                       i,
-                                      duration: const Duration(milliseconds: 500),
+                                      duration: Duration(milliseconds: 500),
                                       curve: Curves.ease,
                                     );
                                     safeSetState(() {});
                                   },
                                   effect:
-                                      const smooth_page_indicator.ExpandingDotsEffect(
+                                      smooth_page_indicator.ExpandingDotsEffect(
                                     expansionFactor: 3.0,
                                     spacing: 8.0,
                                     radius: 16.0,
@@ -993,13 +993,13 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                       (FFAppState().continuer == true) &&
                       (FFAppState().lang == 'en'))
                     Expanded(
-                      child: SizedBox(
+                      child: Container(
                         width: double.infinity,
                         height: 500.0,
                         child: Stack(
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 40.0),
                               child: PageView(
                                 controller: _model.pageViewController4 ??=
@@ -1228,9 +1228,9 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(-1.0, 1.0),
+                              alignment: AlignmentDirectional(-1.0, 1.0),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 0.0, 16.0),
                                 child:
                                     smooth_page_indicator.SmoothPageIndicator(
@@ -1242,13 +1242,13 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                                     await _model.pageViewController4!
                                         .animateToPage(
                                       i,
-                                      duration: const Duration(milliseconds: 500),
+                                      duration: Duration(milliseconds: 500),
                                       curve: Curves.ease,
                                     );
                                     safeSetState(() {});
                                   },
                                   effect:
-                                      const smooth_page_indicator.ExpandingDotsEffect(
+                                      smooth_page_indicator.ExpandingDotsEffect(
                                     expansionFactor: 3.0,
                                     spacing: 8.0,
                                     radius: 16.0,
@@ -1269,13 +1269,13 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                       (FFAppState().continuer == false) &&
                       (FFAppState().lang == 'es'))
                     Expanded(
-                      child: SizedBox(
+                      child: Container(
                         width: double.infinity,
                         height: 500.0,
                         child: Stack(
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 40.0),
                               child: PageView(
                                 controller: _model.pageViewController5 ??=
@@ -1469,9 +1469,9 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(-1.0, 1.0),
+                              alignment: AlignmentDirectional(-1.0, 1.0),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 0.0, 16.0),
                                 child:
                                     smooth_page_indicator.SmoothPageIndicator(
@@ -1483,13 +1483,13 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                                     await _model.pageViewController5!
                                         .animateToPage(
                                       i,
-                                      duration: const Duration(milliseconds: 500),
+                                      duration: Duration(milliseconds: 500),
                                       curve: Curves.ease,
                                     );
                                     safeSetState(() {});
                                   },
                                   effect:
-                                      const smooth_page_indicator.ExpandingDotsEffect(
+                                      smooth_page_indicator.ExpandingDotsEffect(
                                     expansionFactor: 3.0,
                                     spacing: 8.0,
                                     radius: 16.0,
@@ -1510,13 +1510,13 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                       (FFAppState().continuer == true) &&
                       (FFAppState().lang == 'es'))
                     Expanded(
-                      child: SizedBox(
+                      child: Container(
                         width: double.infinity,
                         height: 500.0,
                         child: Stack(
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 40.0),
                               child: PageView(
                                 controller: _model.pageViewController6 ??=
@@ -1701,9 +1701,9 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(-1.0, 1.0),
+                              alignment: AlignmentDirectional(-1.0, 1.0),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 0.0, 16.0),
                                 child:
                                     smooth_page_indicator.SmoothPageIndicator(
@@ -1715,13 +1715,13 @@ class _DecryptekWidgetState extends State<DecryptekWidget> {
                                     await _model.pageViewController6!
                                         .animateToPage(
                                       i,
-                                      duration: const Duration(milliseconds: 500),
+                                      duration: Duration(milliseconds: 500),
                                       curve: Curves.ease,
                                     );
                                     safeSetState(() {});
                                   },
                                   effect:
-                                      const smooth_page_indicator.ExpandingDotsEffect(
+                                      smooth_page_indicator.ExpandingDotsEffect(
                                     expansionFactor: 3.0,
                                     spacing: 8.0,
                                     radius: 16.0,

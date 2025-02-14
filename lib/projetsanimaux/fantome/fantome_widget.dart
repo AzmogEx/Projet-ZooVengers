@@ -71,7 +71,7 @@ class _FantomeWidgetState extends State<FantomeWidget> {
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: const Icon(
+            icon: Icon(
               Icons.keyboard_backspace,
               color: Colors.white,
               size: 30.0,
@@ -93,9 +93,9 @@ class _FantomeWidgetState extends State<FantomeWidget> {
           ),
           actions: [
             Align(
-              alignment: const AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.0, 0.0),
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                 child: FlutterFlowTimer(
                   initialTime: FFAppState().countDown,
                   getDisplayTime: (value) => StopWatchTimer.getDisplayTime(
@@ -104,7 +104,7 @@ class _FantomeWidgetState extends State<FantomeWidget> {
                     milliSecond: false,
                   ),
                   controller: _model.timerController,
-                  updateStateInterval: const Duration(milliseconds: 1000),
+                  updateStateInterval: Duration(milliseconds: 1000),
                   onChanged: (value, displayTime, shouldUpdate) {
                     _model.timerMilliseconds = value;
                     _model.timerValue = displayTime;
@@ -153,12 +153,12 @@ class _FantomeWidgetState extends State<FantomeWidget> {
                           letterSpacing: 0.0,
                         ),
                   ),
-                  const Icon(
+                  Icon(
                     Icons.music_note,
                     color: Colors.black,
                     size: 50.0,
                   ),
-                  const FlutterFlowVideoPlayer(
+                  FlutterFlowVideoPlayer(
                     path: 'assets/videos/Panthere.mp4',
                     videoType: VideoType.asset,
                     autoPlay: true,
@@ -168,7 +168,7 @@ class _FantomeWidgetState extends State<FantomeWidget> {
                     allowPlaybackSpeedMenu: false,
                   ),
                   Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         '58vkbx2s' /* Utilisez cette vidéo pour retr... */,
@@ -192,10 +192,10 @@ class _FantomeWidgetState extends State<FantomeWidget> {
                         ),
                   ),
                   Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                       child: TextFormField(
                         controller: _model.textController,
                         focusNode: _model.textFieldFocusNode,
@@ -207,14 +207,14 @@ class _FantomeWidgetState extends State<FantomeWidget> {
                               context: context,
                               builder: (alertDialogContext) {
                                 return AlertDialog(
-                                  title: const Text('BRAVO!'),
-                                  content: const Text(
+                                  title: Text('BRAVO!'),
+                                  content: Text(
                                       'Felicitations, vous avez trouver un nouveau chiffre du code final.'),
                                   actions: [
                                     TextButton(
                                       onPressed: () =>
                                           Navigator.pop(alertDialogContext),
-                                      child: const Text('continuer'),
+                                      child: Text('continuer'),
                                     ),
                                   ],
                                 );
@@ -225,14 +225,14 @@ class _FantomeWidgetState extends State<FantomeWidget> {
                               context: context,
                               builder: (alertDialogContext) {
                                 return AlertDialog(
-                                  title: const Text('ERREUR!'),
-                                  content: const Text(
+                                  title: Text('ERREUR!'),
+                                  content: Text(
                                       'Le code inserer n\'est pas correcte'),
                                   actions: [
                                     TextButton(
                                       onPressed: () =>
                                           Navigator.pop(alertDialogContext),
-                                      child: const Text('Ok'),
+                                      child: Text('Ok'),
                                     ),
                                   ],
                                 );
@@ -264,7 +264,7 @@ class _FantomeWidgetState extends State<FantomeWidget> {
                             borderRadius: BorderRadius.circular(8.0),
                           ),
                           focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
+                            borderSide: BorderSide(
                               color: Color(0x00000000),
                               width: 2.0,
                             ),
@@ -490,9 +490,9 @@ class _FantomeWidgetState extends State<FantomeWidget> {
                     options: FFButtonOptions(
                       height: 40.0,
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
@@ -501,7 +501,7 @@ class _FantomeWidgetState extends State<FantomeWidget> {
                                 letterSpacing: 0.0,
                               ),
                       elevation: 3.0,
-                      borderSide: const BorderSide(
+                      borderSide: BorderSide(
                         color: Colors.transparent,
                         width: 1.0,
                       ),

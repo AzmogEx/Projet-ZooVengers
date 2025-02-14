@@ -69,9 +69,9 @@ class _PasswordWidgetState extends State<PasswordWidget> {
             Visibility(
               visible: FFAppState().continuer == false,
               child: Align(
-                alignment: const AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 20.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 20.0, 0.0),
                   child: FlutterFlowTimer(
                     initialTime: FFAppState().countDown,
                     getDisplayTime: (value) => StopWatchTimer.getDisplayTime(
@@ -80,7 +80,7 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                       milliSecond: false,
                     ),
                     controller: _model.timerController,
-                    updateStateInterval: const Duration(milliseconds: 1000),
+                    updateStateInterval: Duration(milliseconds: 1000),
                     onChanged: (value, displayTime, shouldUpdate) {
                       _model.timerMilliseconds = value;
                       _model.timerValue = displayTime;
@@ -101,14 +101,14 @@ class _PasswordWidgetState extends State<PasswordWidget> {
           elevation: 0.0,
         ),
         body: Align(
-          alignment: const AlignmentDirectional(0.0, -1.0),
+          alignment: AlignmentDirectional(0.0, -1.0),
           child: Container(
             width: double.infinity,
-            constraints: const BoxConstraints(
+            constraints: BoxConstraints(
               maxWidth: 570.0,
             ),
             decoration: BoxDecoration(
-              color: const Color(0xFF7A90A4),
+              color: Color(0xFF7A90A4),
               image: DecorationImage(
                 fit: BoxFit.cover,
                 image: Image.asset(
@@ -117,7 +117,7 @@ class _PasswordWidgetState extends State<PasswordWidget> {
               ),
             ),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -130,7 +130,7 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                   ))
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -143,7 +143,7 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 12.0, 0.0, 12.0),
                               child: Icon(
                                 Icons.arrow_back_rounded,
@@ -152,7 +152,7 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
@@ -171,7 +171,7 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                       ),
                     ),
                   Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         'zx2l5tcm' /* MOT DE PASSE FINAL D'EXTRACTIO... */,
@@ -186,8 +186,8 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
-                    child: SizedBox(
+                        EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
+                    child: Container(
                       width: double.infinity,
                       child: TextFormField(
                         controller: _model.passWordTextController,
@@ -213,7 +213,7 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                                     letterSpacing: 0.0,
                                   ),
                           enabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
+                            borderSide: BorderSide(
                               color: Color(0xFFB8CBD0),
                               width: 2.0,
                             ),
@@ -241,8 +241,8 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                             borderRadius: BorderRadius.circular(12.0),
                           ),
                           filled: true,
-                          fillColor: const Color(0xFFB8CBD0),
-                          contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                          fillColor: Color(0xFFB8CBD0),
+                          contentPadding: EdgeInsetsDirectional.fromSTEB(
                               24.0, 24.0, 20.0, 24.0),
                           prefixIcon: Icon(
                             Icons.password,
@@ -259,7 +259,7 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                               _model.passWordVisibility
                                   ? Icons.visibility_outlined
                                   : Icons.visibility_off_outlined,
-                              color: const Color(0xFF757575),
+                              color: Color(0xFF757575),
                               size: 22.0,
                             ),
                           ),
@@ -280,7 +280,7 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                   ),
                   if (FFAppState().animSend)
                     Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Lottie.asset(
                         'assets/jsons/animSend.json',
                         width: 311.0,
@@ -291,7 +291,7 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                     ),
                   if (FFAppState().animVerif)
                     Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Lottie.asset(
                         'assets/jsons/AnimCheck.json',
                         width: 188.0,
@@ -302,9 +302,9 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                     ),
                   Flexible(
                     child: Align(
-                      alignment: const AlignmentDirectional(0.0, 1.0),
+                      alignment: AlignmentDirectional(0.0, 1.0),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 24.0, 16.0, 50.0),
                         child: FFButtonWidget(
                           onPressed: () async {
@@ -330,8 +330,8 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFF7335D0),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFF7335D0),
                                     ),
                                   );
                                   await Future.delayed(
@@ -357,8 +357,8 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFF41E822),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFF41E822),
                                     ),
                                   );
                                   await Future.delayed(
@@ -426,8 +426,8 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFF7335D0),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFF7335D0),
                                     ),
                                   );
                                   await Future.delayed(
@@ -453,8 +453,8 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFF41E822),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFF41E822),
                                     ),
                                   );
                                   await Future.delayed(
@@ -524,8 +524,8 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFF7335D0),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFF7335D0),
                                     ),
                                   );
                                   await Future.delayed(
@@ -551,8 +551,8 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFF41E822),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFF41E822),
                                     ),
                                   );
                                   await Future.delayed(
@@ -620,8 +620,8 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFF7335D0),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFF7335D0),
                                     ),
                                   );
                                   await Future.delayed(
@@ -647,8 +647,8 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFF41E822),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFF41E822),
                                     ),
                                   );
                                   await Future.delayed(
@@ -704,9 +704,9 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                           options: FFButtonOptions(
                             width: double.infinity,
                             height: 50.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
                             textStyle: FlutterFlowTheme.of(context)
@@ -716,7 +716,7 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                                   letterSpacing: 0.0,
                                 ),
                             elevation: 3.0,
-                            borderSide: const BorderSide(
+                            borderSide: BorderSide(
                               color: Colors.transparent,
                               width: 1.0,
                             ),

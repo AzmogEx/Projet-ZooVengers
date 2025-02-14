@@ -75,12 +75,12 @@ class _ScanWidgetState extends State<ScanWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFF7A90A4),
+        backgroundColor: Color(0xFF7A90A4),
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
           title: Align(
-            alignment: const AlignmentDirectional(-1.0, 0.0),
+            alignment: AlignmentDirectional(-1.0, 0.0),
             child: Text(
               FFLocalizations.of(context).getText(
                 'przuw6rp' /* Scan QR Code */,
@@ -96,7 +96,7 @@ class _ScanWidgetState extends State<ScanWidget> {
             Visibility(
               visible: FFAppState().continuer == false,
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 20.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 20.0, 0.0),
                 child: FlutterFlowTimer(
                   initialTime: FFAppState().countDown,
                   getDisplayTime: (value) => StopWatchTimer.getDisplayTime(
@@ -105,7 +105,7 @@ class _ScanWidgetState extends State<ScanWidget> {
                     milliSecond: false,
                   ),
                   controller: _model.timerController,
-                  updateStateInterval: const Duration(milliseconds: 1000),
+                  updateStateInterval: Duration(milliseconds: 1000),
                   onChanged: (value, displayTime, shouldUpdate) {
                     _model.timerMilliseconds = value;
                     _model.timerValue = displayTime;
@@ -144,7 +144,7 @@ class _ScanWidgetState extends State<ScanWidget> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       'j9t9yuit' /* Placez le qr code au milieu du... */,
@@ -159,7 +159,7 @@ class _ScanWidgetState extends State<ScanWidget> {
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Container(
                     width: 267.0,
                     height: 300.0,
@@ -167,12 +167,12 @@ class _ScanWidgetState extends State<ScanWidget> {
                       color: FlutterFlowTheme.of(context).primary,
                       borderRadius: BorderRadius.circular(8.0),
                     ),
-                    child: SizedBox(
+                    child: Container(
                       width: MediaQuery.sizeOf(context).width * 0.01,
                       child: Stack(
                         children: [
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Icon(
                               Icons.qr_code_scanner,
                               color: FlutterFlowTheme.of(context).primaryText,
@@ -185,17 +185,17 @@ class _ScanWidgetState extends State<ScanWidget> {
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                     child: FFButtonWidget(
                       onPressed: () async {
-                        var shouldSetState = false;
+                        var _shouldSetState = false;
                         _model.adnScans = await actions.scanQRCode(
                           context,
                         );
-                        shouldSetState = true;
+                        _shouldSetState = true;
                         FFAppState().addToAdnScan(_model.adnScans!);
                         safeSetState(() {});
                         if (FFAppState().Difficulte == true) {
@@ -221,13 +221,13 @@ class _ScanWidgetState extends State<ScanWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFFFF0004),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFFFF0004),
                                     ),
                                   );
                                   FFAppState().removeFromAdnScan('FANTOME');
                                   safeSetState(() {});
-                                  if (shouldSetState) safeSetState(() {});
+                                  if (_shouldSetState) safeSetState(() {});
                                   return;
                                 }
                               }),
@@ -253,13 +253,13 @@ class _ScanWidgetState extends State<ScanWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFFFF0004),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFFFF0004),
                                     ),
                                   );
                                   FFAppState().removeFromAdnScan('MARSUPIAL');
                                   safeSetState(() {});
-                                  if (shouldSetState) safeSetState(() {});
+                                  if (_shouldSetState) safeSetState(() {});
                                   return;
                                 }
                               }),
@@ -283,13 +283,13 @@ class _ScanWidgetState extends State<ScanWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFFFF0004),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFFFF0004),
                                     ),
                                   );
                                   FFAppState().removeFromAdnScan('TASMANIE');
                                   safeSetState(() {});
-                                  if (shouldSetState) safeSetState(() {});
+                                  if (_shouldSetState) safeSetState(() {});
                                   return;
                                 }
                               }),
@@ -313,13 +313,13 @@ class _ScanWidgetState extends State<ScanWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFFFF0004),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFFFF0004),
                                     ),
                                   );
                                   FFAppState().removeFromAdnScan('ECLAIR');
                                   safeSetState(() {});
-                                  if (shouldSetState) safeSetState(() {});
+                                  if (_shouldSetState) safeSetState(() {});
                                   return;
                                 }
                               }),
@@ -345,13 +345,13 @@ class _ScanWidgetState extends State<ScanWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFFFF0004),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFFFF0004),
                                     ),
                                   );
                                   FFAppState().removeFromAdnScan('HYGROCHROME');
                                   safeSetState(() {});
-                                  if (shouldSetState) safeSetState(() {});
+                                  if (_shouldSetState) safeSetState(() {});
                                   return;
                                 }
                               }),
@@ -365,8 +365,8 @@ class _ScanWidgetState extends State<ScanWidget> {
                                         .primaryText,
                                   ),
                                 ),
-                                duration: const Duration(milliseconds: 4000),
-                                backgroundColor: const Color(0xFF3CEF26),
+                                duration: Duration(milliseconds: 4000),
+                                backgroundColor: Color(0xFF3CEF26),
                               ),
                             );
                           } else {
@@ -393,13 +393,13 @@ class _ScanWidgetState extends State<ScanWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFFFF0004),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFFFF0004),
                                     ),
                                   );
                                   FFAppState().removeFromAdnScan('BERSERKER');
                                   safeSetState(() {});
-                                  if (shouldSetState) safeSetState(() {});
+                                  if (_shouldSetState) safeSetState(() {});
                                   return;
                                 }
                               }),
@@ -423,13 +423,13 @@ class _ScanWidgetState extends State<ScanWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFFFF0004),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFFFF0004),
                                     ),
                                   );
                                   FFAppState().removeFromAdnScan('AXOLOLT');
                                   safeSetState(() {});
-                                  if (shouldSetState) safeSetState(() {});
+                                  if (_shouldSetState) safeSetState(() {});
                                   return;
                                 }
                               }),
@@ -453,13 +453,13 @@ class _ScanWidgetState extends State<ScanWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFFFF0004),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFFFF0004),
                                     ),
                                   );
                                   FFAppState().removeFromAdnScan('SYMBIOZ');
                                   safeSetState(() {});
-                                  if (shouldSetState) safeSetState(() {});
+                                  if (_shouldSetState) safeSetState(() {});
                                   return;
                                 }
                               }),
@@ -483,13 +483,13 @@ class _ScanWidgetState extends State<ScanWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFFFF0004),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFFFF0004),
                                     ),
                                   );
                                   FFAppState().removeFromAdnScan('RESSORT');
                                   safeSetState(() {});
-                                  if (shouldSetState) safeSetState(() {});
+                                  if (_shouldSetState) safeSetState(() {});
                                   return;
                                 }
                               }),
@@ -515,13 +515,13 @@ class _ScanWidgetState extends State<ScanWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFFFF0004),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFFFF0004),
                                     ),
                                   );
                                   FFAppState().removeFromAdnScan('SENTINELLE');
                                   safeSetState(() {});
-                                  if (shouldSetState) safeSetState(() {});
+                                  if (_shouldSetState) safeSetState(() {});
                                   return;
                                 }
                               }),
@@ -535,8 +535,8 @@ class _ScanWidgetState extends State<ScanWidget> {
                                         .primaryText,
                                   ),
                                 ),
-                                duration: const Duration(milliseconds: 4000),
-                                backgroundColor: const Color(0xFF3CEF26),
+                                duration: Duration(milliseconds: 4000),
+                                backgroundColor: Color(0xFF3CEF26),
                               ),
                             );
                           }
@@ -563,13 +563,13 @@ class _ScanWidgetState extends State<ScanWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFFFF0004),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFFFF0004),
                                     ),
                                   );
                                   FFAppState().removeFromAdnScan('FANTOME');
                                   safeSetState(() {});
-                                  if (shouldSetState) safeSetState(() {});
+                                  if (_shouldSetState) safeSetState(() {});
                                   return;
                                 }
                               }),
@@ -595,13 +595,13 @@ class _ScanWidgetState extends State<ScanWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFFFF0004),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFFFF0004),
                                     ),
                                   );
                                   FFAppState().removeFromAdnScan('MARSUPIAL');
                                   safeSetState(() {});
-                                  if (shouldSetState) safeSetState(() {});
+                                  if (_shouldSetState) safeSetState(() {});
                                   return;
                                 }
                               }),
@@ -625,13 +625,13 @@ class _ScanWidgetState extends State<ScanWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFFFF0004),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFFFF0004),
                                     ),
                                   );
                                   FFAppState().removeFromAdnScan('TASMANIE');
                                   safeSetState(() {});
-                                  if (shouldSetState) safeSetState(() {});
+                                  if (_shouldSetState) safeSetState(() {});
                                   return;
                                 }
                               }),
@@ -655,13 +655,13 @@ class _ScanWidgetState extends State<ScanWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFFFF0004),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFFFF0004),
                                     ),
                                   );
                                   FFAppState().removeFromAdnScan('ECLAIR');
                                   safeSetState(() {});
-                                  if (shouldSetState) safeSetState(() {});
+                                  if (_shouldSetState) safeSetState(() {});
                                   return;
                                 }
                               }),
@@ -687,13 +687,13 @@ class _ScanWidgetState extends State<ScanWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFFFF0004),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFFFF0004),
                                     ),
                                   );
                                   FFAppState().removeFromAdnScan('HYGROCHROME');
                                   safeSetState(() {});
-                                  if (shouldSetState) safeSetState(() {});
+                                  if (_shouldSetState) safeSetState(() {});
                                   return;
                                 }
                               }),
@@ -707,8 +707,8 @@ class _ScanWidgetState extends State<ScanWidget> {
                                         .primaryText,
                                   ),
                                 ),
-                                duration: const Duration(milliseconds: 4000),
-                                backgroundColor: const Color(0xFF3CEF26),
+                                duration: Duration(milliseconds: 4000),
+                                backgroundColor: Color(0xFF3CEF26),
                               ),
                             );
                           } else {
@@ -735,13 +735,13 @@ class _ScanWidgetState extends State<ScanWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFFFF0004),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFFFF0004),
                                     ),
                                   );
                                   FFAppState().removeFromAdnScan('BERSERKER');
                                   safeSetState(() {});
-                                  if (shouldSetState) safeSetState(() {});
+                                  if (_shouldSetState) safeSetState(() {});
                                   return;
                                 }
                               }),
@@ -765,13 +765,13 @@ class _ScanWidgetState extends State<ScanWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFFFF0004),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFFFF0004),
                                     ),
                                   );
                                   FFAppState().removeFromAdnScan('AXOLOLT');
                                   safeSetState(() {});
-                                  if (shouldSetState) safeSetState(() {});
+                                  if (_shouldSetState) safeSetState(() {});
                                   return;
                                 }
                               }),
@@ -795,13 +795,13 @@ class _ScanWidgetState extends State<ScanWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFFFF0004),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFFFF0004),
                                     ),
                                   );
                                   FFAppState().removeFromAdnScan('SYMBIOZ');
                                   safeSetState(() {});
-                                  if (shouldSetState) safeSetState(() {});
+                                  if (_shouldSetState) safeSetState(() {});
                                   return;
                                 }
                               }),
@@ -825,13 +825,13 @@ class _ScanWidgetState extends State<ScanWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFFFF0004),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFFFF0004),
                                     ),
                                   );
                                   FFAppState().removeFromAdnScan('RESSORT');
                                   safeSetState(() {});
-                                  if (shouldSetState) safeSetState(() {});
+                                  if (_shouldSetState) safeSetState(() {});
                                   return;
                                 }
                               }),
@@ -857,13 +857,13 @@ class _ScanWidgetState extends State<ScanWidget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor: const Color(0xFFFF0004),
+                                      duration: Duration(milliseconds: 4000),
+                                      backgroundColor: Color(0xFFFF0004),
                                     ),
                                   );
                                   FFAppState().removeFromAdnScan('SENTINELLE');
                                   safeSetState(() {});
-                                  if (shouldSetState) safeSetState(() {});
+                                  if (_shouldSetState) safeSetState(() {});
                                   return;
                                 }
                               }),
@@ -877,14 +877,14 @@ class _ScanWidgetState extends State<ScanWidget> {
                                         .primaryText,
                                   ),
                                 ),
-                                duration: const Duration(milliseconds: 4000),
-                                backgroundColor: const Color(0xFF3CEF26),
+                                duration: Duration(milliseconds: 4000),
+                                backgroundColor: Color(0xFF3CEF26),
                               ),
                             );
                           }
                         }
 
-                        if (shouldSetState) safeSetState(() {});
+                        if (_shouldSetState) safeSetState(() {});
                       },
                       text: FFLocalizations.of(context).getText(
                         '3ayp5h8n' /* Démarrer le scan */,
@@ -893,9 +893,9 @@ class _ScanWidgetState extends State<ScanWidget> {
                         width: 200.0,
                         height: 50.0,
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(

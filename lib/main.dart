@@ -21,13 +21,11 @@ void main() async {
 
   runApp(ChangeNotifierProvider(
     create: (context) => appState,
-    child: const MyApp(),
+    child: MyApp(),
   ));
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({super.key});
-
   // This widget is the root of your application.
   @override
   State<MyApp> createState() => _MyAppState();
@@ -61,7 +59,7 @@ class _MyAppState extends State<MyApp> {
     _appStateNotifier = AppStateNotifier.instance;
     _router = createRouter(_appStateNotifier);
 
-    Future.delayed(const Duration(milliseconds: 1000),
+    Future.delayed(Duration(milliseconds: 1000),
         () => safeSetState(() => _appStateNotifier.stopShowingSplashImage()));
   }
 
@@ -78,7 +76,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'Zoovengers',
-      localizationsDelegates: const [
+      localizationsDelegates: [
         FFLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
@@ -117,7 +115,7 @@ class _MyAppState extends State<MyApp> {
 }
 
 class NavBarPage extends StatefulWidget {
-  const NavBarPage({super.key, this.initialPage, this.page});
+  NavBarPage({Key? key, this.initialPage, this.page}) : super(key: key);
 
   final String? initialPage;
   final Widget? page;
@@ -141,11 +139,11 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'Accueil': const AccueilWidget(),
-      'Decryptek': const DecryptekWidget(),
-      'Scan': const ScanWidget(),
-      'Enigmes': const EnigmesWidget(),
-      'password': const PasswordWidget(),
+      'Accueil': AccueilWidget(),
+      'Decryptek': DecryptekWidget(),
+      'Scan': ScanWidget(),
+      'Enigmes': EnigmesWidget(),
+      'password': PasswordWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -160,13 +158,13 @@ class _NavBarPageState extends State<NavBarPage> {
         backgroundColor: FlutterFlowTheme.of(context).primary,
         color: Colors.white,
         activeColor: FlutterFlowTheme.of(context).secondary,
-        tabBackgroundColor: const Color(0x00000000),
+        tabBackgroundColor: Color(0x00000000),
         tabBorderRadius: 100.0,
-        tabMargin: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-        padding: const EdgeInsets.all(16.0),
+        tabMargin: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+        padding: EdgeInsets.all(16.0),
         gap: 0.0,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        duration: const Duration(milliseconds: 500),
+        duration: Duration(milliseconds: 500),
         haptic: false,
         tabs: [
           GButton(

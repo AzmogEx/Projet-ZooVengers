@@ -57,14 +57,14 @@ class _GameOverWidgetState extends State<GameOverWidget> {
               ),
             ),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(32.0, 16.0, 32.0, 16.0),
+              padding: EdgeInsetsDirectional.fromSTEB(32.0, 16.0, 32.0, 16.0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Align(
-                    alignment: const AlignmentDirectional(0.0, -1.0),
+                    alignment: AlignmentDirectional(0.0, -1.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         'wssarhky' /* GAME OVER */,
@@ -77,10 +77,10 @@ class _GameOverWidgetState extends State<GameOverWidget> {
                     ),
                   ),
                   Align(
-                    alignment: const AlignmentDirectional(0.0, -1.0),
+                    alignment: AlignmentDirectional(0.0, -1.0),
                     child: Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 100.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 100.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           'c8z0ej84' /* Vous ne vous êtes pas échappez... */,
@@ -106,9 +106,9 @@ class _GameOverWidgetState extends State<GameOverWidget> {
                       width: 200.0,
                       height: 50.0,
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(

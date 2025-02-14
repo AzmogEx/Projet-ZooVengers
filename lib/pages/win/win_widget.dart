@@ -47,7 +47,7 @@ class _WinWidgetState extends State<WinWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFF7A90A4),
+        backgroundColor: Color(0xFF7A90A4),
         body: SafeArea(
           top: true,
           child: Container(
@@ -73,7 +73,7 @@ class _WinWidgetState extends State<WinWidget> {
                   size: 160.0,
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       'vodp8nnj' /* Félicitation */,
@@ -87,7 +87,7 @@ class _WinWidgetState extends State<WinWidget> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       '46w5o9af' /* Vous avez réussi à retrouvez t... */,
@@ -101,7 +101,7 @@ class _WinWidgetState extends State<WinWidget> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                   child: FlutterFlowTimer(
                     initialTime: valueOrDefault<int>(
                       FFAppState().deuxheures - FFAppState().countDown,
@@ -113,7 +113,7 @@ class _WinWidgetState extends State<WinWidget> {
                       milliSecond: false,
                     ),
                     controller: _model.timerController,
-                    updateStateInterval: const Duration(milliseconds: 1000),
+                    updateStateInterval: Duration(milliseconds: 1000),
                     onChanged: (value, displayTime, shouldUpdate) {
                       _model.timerMilliseconds = value;
                       _model.timerValue = displayTime;
@@ -128,7 +128,7 @@ class _WinWidgetState extends State<WinWidget> {
                   ),
                 ),
                 if (FFAppState().lang == 'fr')
-                  const Align(
+                  Align(
                     alignment: AlignmentDirectional(0.0, 0.0),
                     child: FlutterFlowVideoPlayer(
                       path: 'assets/videos/final-fr.mp4',
@@ -141,7 +141,7 @@ class _WinWidgetState extends State<WinWidget> {
                     ),
                   ),
                 if (FFAppState().lang == 'en')
-                  const Align(
+                  Align(
                     alignment: AlignmentDirectional(0.0, 0.0),
                     child: FlutterFlowVideoPlayer(
                       path: 'assets/videos/final-en.mp4',
@@ -154,7 +154,7 @@ class _WinWidgetState extends State<WinWidget> {
                     ),
                   ),
                 if (FFAppState().lang == 'es')
-                  const Align(
+                  Align(
                     alignment: AlignmentDirectional(0.0, 0.0),
                     child: FlutterFlowVideoPlayer(
                       path: 'assets/videos/final-es.mp4',
@@ -169,7 +169,7 @@ class _WinWidgetState extends State<WinWidget> {
                 if (FFAppState().continuer == false)
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 100.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 100.0),
                     child: FFButtonWidget(
                       onPressed: () async {
                         FFAppState().continuer = true;
@@ -242,9 +242,9 @@ class _WinWidgetState extends State<WinWidget> {
                         width: 130.0,
                         height: 50.0,
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(

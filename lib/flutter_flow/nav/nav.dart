@@ -43,7 +43,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 ),
               ),
             )
-          : const DemarrageWidget(),
+          : DemarrageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
@@ -58,176 +58,176 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                     ),
                   ),
                 )
-              : const DemarrageWidget(),
+              : DemarrageWidget(),
         ),
         FFRoute(
           name: 'Start',
           path: '/start',
-          builder: (context, params) => const StartWidget(),
+          builder: (context, params) => StartWidget(),
         ),
         FFRoute(
           name: 'Timer',
           path: '/timer',
-          builder: (context, params) => const TimerWidget(),
+          builder: (context, params) => TimerWidget(),
         ),
         FFRoute(
           name: 'Accueil',
           path: '/accueil',
           builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'Accueil')
-              : const AccueilWidget(),
+              ? NavBarPage(initialPage: 'Accueil')
+              : AccueilWidget(),
         ),
         FFRoute(
           name: 'Decryptek',
           path: '/decryptek',
           builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'Decryptek')
-              : const DecryptekWidget(),
+              ? NavBarPage(initialPage: 'Decryptek')
+              : DecryptekWidget(),
         ),
         FFRoute(
           name: 'GameOver',
           path: '/gameOver',
-          builder: (context, params) => const GameOverWidget(),
+          builder: (context, params) => GameOverWidget(),
         ),
         FFRoute(
           name: 'Win',
           path: '/win',
-          builder: (context, params) => const WinWidget(),
+          builder: (context, params) => WinWidget(),
         ),
         FFRoute(
           name: 'Scan',
           path: '/scan',
           builder: (context, params) =>
-              params.isEmpty ? const NavBarPage(initialPage: 'Scan') : const ScanWidget(),
+              params.isEmpty ? NavBarPage(initialPage: 'Scan') : ScanWidget(),
         ),
         FFRoute(
           name: 'Enigmes',
           path: '/enigmes',
           builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'Enigmes')
-              : const EnigmesWidget(),
+              ? NavBarPage(initialPage: 'Enigmes')
+              : EnigmesWidget(),
         ),
         FFRoute(
           name: 'projetBerserk',
           path: '/projetBerserk',
-          builder: (context, params) => const ProjetBerserkWidget(),
+          builder: (context, params) => ProjetBerserkWidget(),
         ),
         FFRoute(
           name: 'password',
           path: '/password',
           builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'password')
-              : const PasswordWidget(),
+              ? NavBarPage(initialPage: 'password')
+              : PasswordWidget(),
         ),
         FFRoute(
           name: 'projetEclair',
           path: '/projetEclair',
-          builder: (context, params) => const ProjetEclairWidget(),
+          builder: (context, params) => ProjetEclairWidget(),
         ),
         FFRoute(
           name: 'projetFantome',
           path: '/projetFantome',
-          builder: (context, params) => const ProjetFantomeWidget(),
+          builder: (context, params) => ProjetFantomeWidget(),
         ),
         FFRoute(
           name: 'projetNuit',
           path: '/projetNuit',
-          builder: (context, params) => const ProjetNuitWidget(),
+          builder: (context, params) => ProjetNuitWidget(),
         ),
         FFRoute(
           name: 'projetRessort',
           path: '/projetRessort',
-          builder: (context, params) => const ProjetRessortWidget(),
+          builder: (context, params) => ProjetRessortWidget(),
         ),
         FFRoute(
           name: 'projetSentinelle',
           path: '/projetSentinelle',
-          builder: (context, params) => const ProjetSentinelleWidget(),
+          builder: (context, params) => ProjetSentinelleWidget(),
         ),
         FFRoute(
           name: 'projetSylbioz',
           path: '/projetSylbioz',
-          builder: (context, params) => const ProjetSylbiozWidget(),
+          builder: (context, params) => ProjetSylbiozWidget(),
         ),
         FFRoute(
           name: 'projetTasmanie',
           path: '/projetTasmanie',
-          builder: (context, params) => const ProjetTasmanieWidget(),
+          builder: (context, params) => ProjetTasmanieWidget(),
         ),
         FFRoute(
           name: 'projetMarsupial',
           path: '/projetMarsupial',
-          builder: (context, params) => const ProjetMarsupialWidget(),
+          builder: (context, params) => ProjetMarsupialWidget(),
         ),
         FFRoute(
           name: 'projetGuerisseur',
           path: '/projetGuerisseur',
-          builder: (context, params) => const ProjetGuerisseurWidget(),
+          builder: (context, params) => ProjetGuerisseurWidget(),
         ),
         FFRoute(
           name: 'berserker',
           path: '/berserker',
-          builder: (context, params) => const BerserkerWidget(),
+          builder: (context, params) => BerserkerWidget(),
         ),
         FFRoute(
           name: 'eclair',
           path: '/eclair',
-          builder: (context, params) => const EclairWidget(),
+          builder: (context, params) => EclairWidget(),
         ),
         FFRoute(
           name: 'fantome',
           path: '/fantome',
-          builder: (context, params) => const FantomeWidget(),
+          builder: (context, params) => FantomeWidget(),
         ),
         FFRoute(
           name: 'guerisseur',
           path: '/guerisseur',
-          builder: (context, params) => const GuerisseurWidget(),
+          builder: (context, params) => GuerisseurWidget(),
         ),
         FFRoute(
           name: 'marsupial',
           path: '/marsupial',
-          builder: (context, params) => const MarsupialWidget(),
+          builder: (context, params) => MarsupialWidget(),
         ),
         FFRoute(
           name: 'nuit',
           path: '/nuit',
-          builder: (context, params) => const NuitWidget(),
+          builder: (context, params) => NuitWidget(),
         ),
         FFRoute(
           name: 'ressort',
           path: '/ressort',
-          builder: (context, params) => const RessortWidget(),
+          builder: (context, params) => RessortWidget(),
         ),
         FFRoute(
           name: 'sentinelle',
           path: '/sentinelle',
-          builder: (context, params) => const SentinelleWidget(),
+          builder: (context, params) => SentinelleWidget(),
         ),
         FFRoute(
           name: 'symbioz',
           path: '/symbioz',
-          builder: (context, params) => const SymbiozWidget(),
+          builder: (context, params) => SymbiozWidget(),
         ),
         FFRoute(
           name: 'tasmanie',
           path: '/tasmanie',
-          builder: (context, params) => const TasmanieWidget(),
+          builder: (context, params) => TasmanieWidget(),
         ),
         FFRoute(
           name: 'Demarrage',
           path: '/demarrage',
-          builder: (context, params) => const DemarrageWidget(),
+          builder: (context, params) => DemarrageWidget(),
         ),
         FFRoute(
           name: 'video',
           path: '/video',
-          builder: (context, params) => const VideoWidget(),
+          builder: (context, params) => VideoWidget(),
         ),
         FFRoute(
           name: 'revisionnage',
           path: '/revisionnage',
-          builder: (context, params) => const RevisionnageWidget(),
+          builder: (context, params) => RevisionnageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],
@@ -392,7 +392,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

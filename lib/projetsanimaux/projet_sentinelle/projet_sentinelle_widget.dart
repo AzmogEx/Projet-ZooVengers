@@ -62,7 +62,7 @@ class _ProjetSentinelleWidgetState extends State<ProjetSentinelleWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFF7A90A4),
+        backgroundColor: Color(0xFF7A90A4),
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
@@ -71,7 +71,7 @@ class _ProjetSentinelleWidgetState extends State<ProjetSentinelleWidget> {
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: const Icon(
+            icon: Icon(
               Icons.keyboard_backspace,
               color: Colors.white,
               size: 30.0,
@@ -93,9 +93,9 @@ class _ProjetSentinelleWidgetState extends State<ProjetSentinelleWidget> {
           ),
           actions: [
             Align(
-              alignment: const AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.0, 0.0),
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                 child: FlutterFlowTimer(
                   initialTime: FFAppState().countDown,
                   getDisplayTime: (value) => StopWatchTimer.getDisplayTime(
@@ -104,7 +104,7 @@ class _ProjetSentinelleWidgetState extends State<ProjetSentinelleWidget> {
                     milliSecond: false,
                   ),
                   controller: _model.timerController,
-                  updateStateInterval: const Duration(milliseconds: 1000),
+                  updateStateInterval: Duration(milliseconds: 1000),
                   onChanged: (value, displayTime, shouldUpdate) {
                     _model.timerMilliseconds = value;
                     _model.timerValue = displayTime;
@@ -146,7 +146,7 @@ class _ProjetSentinelleWidgetState extends State<ProjetSentinelleWidget> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Align(
-                      alignment: const AlignmentDirectional(0.0, -1.0),
+                      alignment: AlignmentDirectional(0.0, -1.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           'l3zkbzdv' /* PROJET SENTINELLE */,
@@ -398,10 +398,10 @@ class _ProjetSentinelleWidgetState extends State<ProjetSentinelleWidget> {
                           ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                         child: TextFormField(
                           controller: _model.textController,
                           focusNode: _model.textFieldFocusNode,
@@ -431,7 +431,7 @@ class _ProjetSentinelleWidgetState extends State<ProjetSentinelleWidget> {
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 2.0,
                               ),
@@ -494,7 +494,7 @@ class _ProjetSentinelleWidgetState extends State<ProjetSentinelleWidget> {
                             context.pushNamed(
                               'sentinelle',
                               extra: <String, dynamic>{
-                                kTransitionInfoKey: const TransitionInfo(
+                                kTransitionInfoKey: TransitionInfo(
                                   hasTransition: true,
                                   transitionType:
                                       PageTransitionType.bottomToTop,
@@ -545,7 +545,7 @@ class _ProjetSentinelleWidgetState extends State<ProjetSentinelleWidget> {
                             context.pushNamed(
                               'sentinelle',
                               extra: <String, dynamic>{
-                                kTransitionInfoKey: const TransitionInfo(
+                                kTransitionInfoKey: TransitionInfo(
                                   hasTransition: true,
                                   transitionType:
                                       PageTransitionType.bottomToTop,
@@ -595,10 +595,10 @@ class _ProjetSentinelleWidgetState extends State<ProjetSentinelleWidget> {
                       ),
                       options: FFButtonOptions(
                         height: 40.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             24.0, 0.0, 24.0, 0.0),
                         iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
@@ -607,7 +607,7 @@ class _ProjetSentinelleWidgetState extends State<ProjetSentinelleWidget> {
                                   letterSpacing: 0.0,
                                 ),
                         elevation: 3.0,
-                        borderSide: const BorderSide(
+                        borderSide: BorderSide(
                           color: Colors.transparent,
                           width: 1.0,
                         ),

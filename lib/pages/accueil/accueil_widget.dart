@@ -44,7 +44,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
           }),
           Future(() async {
             if (FFAppState().countDown < 900000) {
-              FFAppState().couleur = const Color(0xFFFF0000);
+              FFAppState().couleur = Color(0xFFFF0000);
               safeSetState(() {});
             } else {
               if (Theme.of(context).brightness == Brightness.dark) {
@@ -94,7 +94,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFF7A90A4),
+        backgroundColor: Color(0xFF7A90A4),
         body: SafeArea(
           top: true,
           child: Container(
@@ -122,7 +122,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                           backgroundColor: FlutterFlowTheme.of(context).primary,
                           automaticallyImplyLeading: false,
                           title: Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
                                 'ooph7t6l' /* Zoovengers */,
@@ -138,14 +138,14 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                                   ),
                             ),
                           ),
-                          actions: const [],
+                          actions: [],
                           centerTitle: false,
                           elevation: 0.0,
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 16.0, 16.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
@@ -164,9 +164,9 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 16.0, 16.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
@@ -185,17 +185,17 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Container(
                             width: MediaQuery.sizeOf(context).width * 1.0,
                             height: 100.0,
-                            decoration: const BoxDecoration(
+                            decoration: BoxDecoration(
                               color: Color(0x007A90A4),
                             ),
                             child: Visibility(
                               visible: FFAppState().continuer == false,
                               child: Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: FlutterFlowTimer(
                                   initialTime: FFAppState().countDown,
                                   getDisplayTime: (value) =>
@@ -206,7 +206,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                                   ),
                                   controller: _model.timerController,
                                   updateStateInterval:
-                                      const Duration(milliseconds: 1000),
+                                      Duration(milliseconds: 1000),
                                   onChanged:
                                       (value, displayTime, shouldUpdate) {
                                     _model.timerMilliseconds = value;
@@ -242,7 +242,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
                               'x9ypormm' /* Code final d'extraction:  */,
@@ -264,7 +264,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                             width: 399.0,
                             height: 100.0,
                             decoration: BoxDecoration(
-                              color: const Color(0x007B5656),
+                              color: Color(0x007B5656),
                               image: DecorationImage(
                                 fit: BoxFit.contain,
                                 image: Image.asset(
@@ -273,14 +273,14 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                               ),
                             ),
                             child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.min,
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFAppState().mdpfinale.contains(
                                               FFAppState()
@@ -302,7 +302,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFAppState().mdpfinale.contains(
                                               FFAppState()
@@ -323,7 +323,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFAppState().mdpfinale.contains(
                                               FFAppState()
@@ -344,7 +344,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFAppState().mdpfinale.contains(
                                               FFAppState()
@@ -365,7 +365,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFAppState().mdpfinale.contains(
                                               FFAppState()
@@ -385,7 +385,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                                           ),
                                     ),
                                   ),
-                                ].divide(const SizedBox(width: 65.0)),
+                                ].divide(SizedBox(width: 65.0)),
                               ),
                             ),
                           ),
@@ -395,7 +395,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                             width: 399.0,
                             height: 100.0,
                             decoration: BoxDecoration(
-                              color: const Color(0x007B5656),
+                              color: Color(0x007B5656),
                               image: DecorationImage(
                                 fit: BoxFit.contain,
                                 image: Image.asset(
@@ -404,15 +404,15 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                               ),
                             ),
                             child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           5.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         FFAppState().mdpfinale.contains(
@@ -434,7 +434,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFAppState().mdpfinale.contains(
                                               FFAppState()
@@ -454,7 +454,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFAppState().mdpfinale.contains(
                                               FFAppState()
@@ -474,7 +474,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFAppState().mdpfinale.contains(
                                               FFAppState()
@@ -494,9 +494,9 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 5.0, 0.0),
                                       child: Text(
                                         FFAppState().mdpfinale.contains(
@@ -517,7 +517,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                                       ),
                                     ),
                                   ),
-                                ].divide(const SizedBox(width: 65.0)),
+                                ].divide(SizedBox(width: 65.0)),
                               ),
                             ),
                           ),
@@ -527,7 +527,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                             width: 399.0,
                             height: 100.0,
                             decoration: BoxDecoration(
-                              color: const Color(0x007B5656),
+                              color: Color(0x007B5656),
                               image: DecorationImage(
                                 fit: BoxFit.contain,
                                 image: Image.asset(
@@ -536,13 +536,13 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                               ),
                             ),
                             child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFAppState().mdpfinale.contains(
                                               FFAppState()
@@ -562,7 +562,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFAppState().mdpfinale.contains(
                                               FFAppState()
@@ -582,7 +582,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFAppState().mdpfinale.contains(
                                               FFAppState()
@@ -602,7 +602,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFAppState().mdpfinale.contains(
                                               FFAppState()
@@ -622,7 +622,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFAppState().mdpfinale.contains(
                                               FFAppState()
@@ -641,7 +641,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                                           ),
                                     ),
                                   ),
-                                ].divide(const SizedBox(width: 65.0)),
+                                ].divide(SizedBox(width: 65.0)),
                               ),
                             ),
                           ),
@@ -651,7 +651,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                             width: 399.0,
                             height: 100.0,
                             decoration: BoxDecoration(
-                              color: const Color(0x007B5656),
+                              color: Color(0x007B5656),
                               image: DecorationImage(
                                 fit: BoxFit.contain,
                                 image: Image.asset(
@@ -660,13 +660,13 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                               ),
                             ),
                             child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFAppState().mdpfinale.contains(
                                               FFAppState()
@@ -686,7 +686,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFAppState().mdpfinale.contains(
                                               FFAppState()
@@ -706,7 +706,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFAppState().mdpfinale.contains(
                                               FFAppState()
@@ -726,7 +726,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFAppState().mdpfinale.contains(
                                               FFAppState()
@@ -746,7 +746,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFAppState().mdpfinale.contains(
                                               FFAppState()
@@ -765,19 +765,19 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                                           ),
                                     ),
                                   ),
-                                ].divide(const SizedBox(width: 65.0)),
+                                ].divide(SizedBox(width: 65.0)),
                               ),
                             ),
                           ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 1.0),
+                          alignment: AlignmentDirectional(0.0, 1.0),
                           child: Container(
                             width: 100.0,
                             height: 100.0,
-                            decoration: const BoxDecoration(),
+                            decoration: BoxDecoration(),
                             child: AlignedTooltip(
                               content: Padding(
-                                padding: const EdgeInsets.all(4.0),
+                                padding: EdgeInsets.all(4.0),
                                 child: Text(
                                   FFLocalizations.of(context).getVariableText(
                                     frText: FFAppState()
@@ -808,8 +808,8 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                               elevation: 4.0,
                               tailBaseWidth: 40.0,
                               tailLength: 12.0,
-                              waitDuration: const Duration(milliseconds: 100),
-                              showDuration: const Duration(milliseconds: 2000),
+                              waitDuration: Duration(milliseconds: 100),
+                              showDuration: Duration(milliseconds: 2000),
                               triggerMode: TooltipTriggerMode.tap,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
@@ -828,7 +828,7 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                     child: FFButtonWidget(
                       onPressed: () async {
                         context.pushNamed('revisionnage');
@@ -838,10 +838,10 @@ class _AccueilWidgetState extends State<AccueilWidget> {
                       ),
                       options: FFButtonOptions(
                         height: 40.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(

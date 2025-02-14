@@ -67,7 +67,7 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
           title: Align(
-            alignment: const AlignmentDirectional(-1.0, 0.0),
+            alignment: AlignmentDirectional(-1.0, 0.0),
             child: Text(
               FFLocalizations.of(context).getText(
                 's4mzzcnt' /* Enigmes */,
@@ -85,9 +85,9 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
             Visibility(
               visible: FFAppState().continuer == false,
               child: Align(
-                alignment: const AlignmentDirectional(1.0, -1.0),
+                alignment: AlignmentDirectional(1.0, -1.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 20.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 20.0, 0.0),
                   child: FlutterFlowTimer(
                     initialTime: FFAppState().countDown,
                     getDisplayTime: (value) => StopWatchTimer.getDisplayTime(
@@ -96,7 +96,7 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                       milliSecond: false,
                     ),
                     controller: _model.timerController,
-                    updateStateInterval: const Duration(milliseconds: 1000),
+                    updateStateInterval: Duration(milliseconds: 1000),
                     onChanged: (value, displayTime, shouldUpdate) {
                       _model.timerMilliseconds = value;
                       _model.timerValue = displayTime;
@@ -126,7 +126,7 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                   width: MediaQuery.sizeOf(context).width * 1.0,
                   height: MediaQuery.sizeOf(context).height * 1.0,
                   decoration: BoxDecoration(
-                    color: const Color(0xFF7A90A4),
+                    color: Color(0xFF7A90A4),
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: Image.asset(
@@ -138,9 +138,9 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Align(
-                        alignment: const AlignmentDirectional(0.0, -1.0),
+                        alignment: AlignmentDirectional(0.0, -1.0),
                         child: Padding(
-                          padding: const EdgeInsets.all(14.0),
+                          padding: EdgeInsets.all(14.0),
                           child: SingleChildScrollView(
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -171,13 +171,13 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                     ),
                                     options: FFButtonOptions(
                                       height: 40.0,
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          const EdgeInsetsDirectional.fromSTEB(
+                                          EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color: FFAppState().chauve == true
-                                          ? const Color(0xFF00F91C)
+                                          ? Color(0xFF00F91C)
                                           : FlutterFlowTheme.of(context)
                                               .primary,
                                       textStyle: FlutterFlowTheme.of(context)
@@ -188,7 +188,7 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                       elevation: 3.0,
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Colors.transparent,
                                         width: 1.0,
                                       ),
@@ -206,7 +206,7 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                             .adnScan
                                             .contains('SENTINELLE')))
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 20.0, 0.0, 0.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
@@ -221,13 +221,13 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                       ),
                                       options: FFButtonOptions(
                                         height: 40.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             24.0, 0.0, 24.0, 0.0),
                                         iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: FFAppState().hibou == true
-                                            ? const Color(0xFF00F91C)
+                                            ? Color(0xFF00F91C)
                                             : FlutterFlowTheme.of(context)
                                                 .primary,
                                         textStyle: FlutterFlowTheme.of(context)
@@ -238,7 +238,7 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                               letterSpacing: 0.0,
                                             ),
                                         elevation: 3.0,
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -258,7 +258,7 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                             .adnScan
                                             .contains('SYMBIOZ')))
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 20.0, 0.0, 0.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
@@ -273,13 +273,13 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                       ),
                                       options: FFButtonOptions(
                                         height: 40.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             24.0, 0.0, 24.0, 0.0),
                                         iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: FFAppState().paresseux == true
-                                            ? const Color(0xFF00F91C)
+                                            ? Color(0xFF00F91C)
                                             : FlutterFlowTheme.of(context)
                                                 .primary,
                                         textStyle: FlutterFlowTheme.of(context)
@@ -290,7 +290,7 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                               letterSpacing: 0.0,
                                             ),
                                         elevation: 3.0,
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -310,7 +310,7 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                             .adnScan
                                             .contains('RESSORT')))
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 20.0, 0.0, 0.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
@@ -325,13 +325,13 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                       ),
                                       options: FFButtonOptions(
                                         height: 40.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             24.0, 0.0, 24.0, 0.0),
                                         iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: FFAppState().chamois == true
-                                            ? const Color(0xFF00F91C)
+                                            ? Color(0xFF00F91C)
                                             : FlutterFlowTheme.of(context)
                                                 .primary,
                                         textStyle: FlutterFlowTheme.of(context)
@@ -342,7 +342,7 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                               letterSpacing: 0.0,
                                             ),
                                         elevation: 3.0,
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -362,7 +362,7 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                             .adnScan
                                             .contains('TASMANIE')))
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 20.0, 0.0, 0.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
@@ -377,14 +377,14 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                       ),
                                       options: FFButtonOptions(
                                         height: 40.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             24.0, 0.0, 24.0, 0.0),
                                         iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color:
                                             FFAppState().ornythorinque == true
-                                                ? const Color(0xFF00F91C)
+                                                ? Color(0xFF00F91C)
                                                 : FlutterFlowTheme.of(context)
                                                     .primary,
                                         textStyle: FlutterFlowTheme.of(context)
@@ -395,7 +395,7 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                               letterSpacing: 0.0,
                                             ),
                                         elevation: 3.0,
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -415,7 +415,7 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                             .adnScan
                                             .contains('AXOLOLT')))
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 20.0, 0.0, 0.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
@@ -430,13 +430,13 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                       ),
                                       options: FFButtonOptions(
                                         height: 40.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             24.0, 0.0, 24.0, 0.0),
                                         iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: FFAppState().guerrisseur == true
-                                            ? const Color(0xFF00F91C)
+                                            ? Color(0xFF00F91C)
                                             : FlutterFlowTheme.of(context)
                                                 .primary,
                                         textStyle: FlutterFlowTheme.of(context)
@@ -447,7 +447,7 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                               letterSpacing: 0.0,
                                             ),
                                         elevation: 3.0,
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -467,7 +467,7 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                             .adnScan
                                             .contains('FANTOME')))
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 20.0, 0.0, 0.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
@@ -482,13 +482,13 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                       ),
                                       options: FFButtonOptions(
                                         height: 40.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             24.0, 0.0, 24.0, 0.0),
                                         iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: FFAppState().panthere == true
-                                            ? const Color(0xFF00F91C)
+                                            ? Color(0xFF00F91C)
                                             : FlutterFlowTheme.of(context)
                                                 .primary,
                                         textStyle: FlutterFlowTheme.of(context)
@@ -499,7 +499,7 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                               letterSpacing: 0.0,
                                             ),
                                         elevation: 3.0,
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -519,7 +519,7 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                             .adnScan
                                             .contains('ECLAIR')))
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 20.0, 0.0, 0.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
@@ -534,13 +534,13 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                       ),
                                       options: FFButtonOptions(
                                         height: 40.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             24.0, 0.0, 24.0, 0.0),
                                         iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: FFAppState().colibri == true
-                                            ? const Color(0xFF00F91C)
+                                            ? Color(0xFF00F91C)
                                             : FlutterFlowTheme.of(context)
                                                 .primary,
                                         textStyle: FlutterFlowTheme.of(context)
@@ -551,7 +551,7 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                               letterSpacing: 0.0,
                                             ),
                                         elevation: 3.0,
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -571,7 +571,7 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                             .adnScan
                                             .contains('MARSUPIAL')))
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 20.0, 0.0, 0.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
@@ -586,13 +586,13 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                       ),
                                       options: FFButtonOptions(
                                         height: 40.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             24.0, 0.0, 24.0, 0.0),
                                         iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: FFAppState().sucre == true
-                                            ? const Color(0xFF00F91C)
+                                            ? Color(0xFF00F91C)
                                             : FlutterFlowTheme.of(context)
                                                 .primary,
                                         textStyle: FlutterFlowTheme.of(context)
@@ -603,7 +603,7 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                               letterSpacing: 0.0,
                                             ),
                                         elevation: 3.0,
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -623,7 +623,7 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                             .adnScan
                                             .contains('BERSERKER')))
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 20.0, 0.0, 0.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
@@ -638,13 +638,13 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                       ),
                                       options: FFButtonOptions(
                                         height: 40.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             24.0, 0.0, 24.0, 0.0),
                                         iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: FFAppState().ours == true
-                                            ? const Color(0xFF00F91C)
+                                            ? Color(0xFF00F91C)
                                             : FlutterFlowTheme.of(context)
                                                 .primary,
                                         textStyle: FlutterFlowTheme.of(context)
@@ -655,7 +655,7 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                                               letterSpacing: 0.0,
                                             ),
                                         elevation: 3.0,
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -670,16 +670,16 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(0.0, 1.0),
+                        alignment: AlignmentDirectional(0.0, 1.0),
                         child: Container(
                           width: 100.0,
                           height: 100.0,
-                          decoration: const BoxDecoration(
+                          decoration: BoxDecoration(
                             color: Color(0x007A90A4),
                           ),
                           child: AlignedTooltip(
                             content: Padding(
-                              padding: const EdgeInsets.all(4.0),
+                              padding: EdgeInsets.all(4.0),
                               child: Text(
                                 FFAppState().NbrEnigmesFait == 0
                                     ? FFLocalizations.of(context)
@@ -762,8 +762,8 @@ class _EnigmesWidgetState extends State<EnigmesWidget> {
                             elevation: 4.0,
                             tailBaseWidth: 40.0,
                             tailLength: 12.0,
-                            waitDuration: const Duration(milliseconds: 100),
-                            showDuration: const Duration(milliseconds: 4000),
+                            waitDuration: Duration(milliseconds: 100),
+                            showDuration: Duration(milliseconds: 4000),
                             triggerMode: TooltipTriggerMode.tap,
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
