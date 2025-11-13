@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "217934131130",
+    "project_id": "zoovengers-10770",
+    "storage_bucket": "zoovengers-10770.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:217934131130:android:2a02d36ca617ec004cf783",
+        "android_client_info": {
+          "package_name": "fr.museum.zoovengers"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM-s6hWXv1lNgMm8Eib-khjwpC7UFrYjc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Zoovengers",
+  "short_name": "Zoovengers",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f1f4f8",
+  "theme_color": "#1d2428",
+  "description": "Application Zoovengers - Zoo interactif",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "icons/Icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/Icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ]
+}

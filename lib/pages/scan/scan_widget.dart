@@ -5,7 +5,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:stop_watch_timer/stop_watch_timer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
+import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:provider/provider.dart';
 import 'scan_model.dart';
 export 'scan_model.dart';
@@ -190,17 +190,22 @@ class _ScanWidgetState extends State<ScanWidget> {
                         const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                     child: FFButtonWidget(
                       onPressed: () async {
-                        _model.adnScans =
-                            await FlutterBarcodeScanner.scanBarcode(
-                          '#C62828', // scanning line color
-                          FFLocalizations.of(context).getText(
-                            'w9msst5p' /* Cancel */,
-                          ), // cancel button text
-                          true, // whether to show the flash icon
-                          ScanMode.QR,
+                        // Ouvrir le scanner QR code avec mobile_scanner
+                        final scannedCode = await Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => _QRScannerScreen(),
+                          ),
                         );
 
-                        FFAppState().addToAdnScan(_model.adnScans);
+                        if (scannedCode != null && scannedCode.isNotEmpty) {
+                          _model.adnScans = scannedCode;
+                        } else {
+                          _model.adnScans = '-1'; // Code annulé
+                        }
+
+                        if (_model.adnScans != '-1') {
+                          FFAppState().addToAdnScan(_model.adnScans);
+                        }
                         setState(() {});
                         if (FFAppState().Difficulte == true) {
                           if (FFAppState().continuer == true) {
@@ -678,6 +683,90 @@ class _ScanWidgetState extends State<ScanWidget> {
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+// Écran de scan QR code avec mobile_scanner
+class _QRScannerScreen extends StatefulWidget {
+  @override
+  _QRScannerScreenState createState() => _QRScannerScreenState();
+}
+
+class _QRScannerScreenState extends State<_QRScannerScreen> {
+  MobileScannerController cameraController = MobileScannerController();
+  bool _isScanned = false;
+
+  @override
+  void dispose() {
+    cameraController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Scanner QR Code'),
+        backgroundColor: const Color(0xFF1D2428),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.close),
+            onPressed: () => Navigator.of(context).pop(null),
+          ),
+        ],
+      ),
+      body: Stack(
+        children: [
+          MobileScanner(
+            controller: cameraController,
+            onDetect: (capture) {
+              if (_isScanned) return;
+
+              final List<Barcode> barcodes = capture.barcodes;
+              for (final barcode in barcodes) {
+                if (barcode.rawValue != null) {
+                  _isScanned = true;
+                  Navigator.of(context).pop(barcode.rawValue);
+                  break;
+                }
+              }
+            },
+          ),
+          Center(
+            child: Container(
+              width: 250,
+              height: 250,
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.red, width: 3),
+                borderRadius: BorderRadius.circular(12),
+              ),
+            ),
+          ),
+          Positioned(
+            bottom: 40,
+            left: 0,
+            right: 0,
+            child: Center(
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                decoration: BoxDecoration(
+                  color: Colors.black54,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: const Text(
+                  'Placez le QR code dans le cadre',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
